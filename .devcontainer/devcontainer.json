@@ -1,12 +1,16 @@
 {
   "name": "Python 3",
-  "build": { "dockerfile": "Dockerfile" },
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12",
+  "remoteUser": "root",
+  "containerUser": "root",
+
+  "runArgs": [
+    "--dns=1.1.1.1",
+    "--dns=8.8.8.8"
+  ],
 
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
+  }
 
-  "remoteUser": "root",
-  "containerUser": "root",
-  "remoteEnv": { "HOME": "/root" }
 }
